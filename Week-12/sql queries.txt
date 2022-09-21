@@ -1,0 +1,24 @@
+SQL queries:
+
+1. SELECT MIN(WEIGHT) as min_WEIGHT
+FROM ITEMS;
+
+2. select * from WAREHOUSES where CITIES_CITY like 'PUNE';
+
+3. select i.itemno, i.weight,i.cost, c.cname,c.cno,o.ono from items i,customer c,orders o
+where c.cname = 'SUMANTH'
+and c.cno=o.CUSTOMER_CNO
+and c.cno=i.CUSTOMER_CNO
+
+4.select max(maxcount), s.sid, w.wid from stores s,warehouses w,  (
+select count(s.wid) as maxcount from warehouses w,stores s where s.wid=w.wid 
+group by s.wid) as t
+
+
+5.select min(mini), item from  (select (count(ITEMNO)) as mini , itemno as item from ITEMS 
+group by ITEMNO) as q
+
+
+6.SELECT orders.CUSTOMER_CNO, ORDERS.ONO,ORDERS.ODATE,customer.CNAME, CUSTOMER.ADDR,CUSTOMER.CU_CITY
+FROM orders, customer
+WHERE orders.CUSTOMER_CNO = CUSTOMER.CNO;
