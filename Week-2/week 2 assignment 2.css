@@ -1,0 +1,51 @@
+.mainbox{
+  transition-timing-function: ease;
+  transition-duration: 2s;
+}
+.mainbox:hover .box1{
+    transform:rotate(90deg);
+  }
+.mainbox:hover .box2{
+    transform:rotate(-90deg);
+  }
+  .mainbox:hover .box3{
+    transform:rotate(-90deg);
+  }
+  .mainbox:hover .box4{
+    transform:rotate(90deg);
+  }
+  .hide{
+    margin-left: 640px;
+    margin-top: 310px;
+}
+
+.box1{
+  background-color: red;
+  transform-origin: top left;
+  margin-top: -110px;
+  margin-left:550px;
+}
+.box2{
+  background-color: blue;
+  transform-origin: bottom left;
+  margin-top: 0px;
+  margin-left:550px;
+}
+.box3{
+  background-color: yellow;
+  transform-origin: top right;
+  margin-top: -200px;
+  margin-left:650px;
+}
+.box4{
+  background-color: green;
+  transform-origin: bottom right;
+  margin-top: 0px;
+  margin-left:650px;
+}
+.box1, .box2, .box3, .box4{
+  width : 100px;
+  height : 100px;
+  transition-duration: 2s;
+  backface-visibility: hidden;
+}
